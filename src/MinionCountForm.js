@@ -2,18 +2,18 @@ import React from 'react';
 
 class MinionCountForm extends React.Component {
   state = {
-    friendlyCount: '',
+    allyCount: '',
     enemyCount: ''
   }
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleSubmit(this.state.friendlyCount, this.state.enemyCount);
+    this.props.handleSubmit(this.state.allyCount, this.state.enemyCount);
   }
 
-  handleFriendlyChange = event => {
+  handleAllyChange = event => {
     event.preventDefault();
     let value = event.target.value;
-    this.setState({friendlyCount: value});
+    this.setState({allyCount: value});
   }
 
   handleEnemyChange = event => {
@@ -25,40 +25,39 @@ class MinionCountForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="form-group col-sm-4">
-          <div className="form-group row">
-            <label htmlFor="friendly" className="col-sm-4 col-form-label"># of Friendly Minions:</label>
-            <input
-              onChange={this.handleFriendlyChange}
-              type="text"
-              className="form-control col-sm-4"
-              id="friendly"
-              placeholder="Max 7"
-            />
-          </div>
-          <div className="form-group row">
-            <label htmlFor="enemy" className="col-sm-4 col-form-label"># of Enemy Minions:</label>
-            <input
-              onChange={this.handleEnemyChange}
-              type="text"
-              className="form-control col-sm-4"
-              id="enemy"
-              placeholder="Max 7"
-            />
-          </div>
-          <div className="form-group row">
-            <label htmlFor="enemy" className="col-sm-4 col-form-label"># of Trials:</label>
-            <input
-              onChange={this.props.handleTrialChange}
-              type="text"
-              className="form-control col-sm-4"
-              id="enemy"
-              placeholder="Max 1,000,000"
-              value={this.props.trials}
-            />
-          </div>
+        <div className="form-group d-flex flex-column">
+          <label htmlFor="ally">Ally Minions on Board:</label>
+          <input
+            onChange={this.handleAllyChange}
+            type="text"
+            className="form-control mb-2"
+            id="ally"
+            placeholder="Ranges from 0 to 7"
+          />
+          <label htmlFor="enemy">Enemy Minions on Board:</label>
+          <input
+            onChange={this.handleEnemyChange}
+            type="text"
+            className="form-control mb-2"
+            id="enemy"
+            placeholder="Ranges from 0 to 7"
+          />
+          <label htmlFor="enemy">Trials to Run:</label>
+          <input
+            onChange={this.props.handleTrialChange}
+            type="text"
+            className="form-control mb-2"
+            id="enemy"
+            placeholder="Max 1,000,000"
+            value={this.props.trials}
+          />
+          <small id="trialsHelpInline" className="text-muted">
+            Ranges from 1 to 1,000,000
+          </small>
         </div>
-        <input type="submit" value="Submit" />
+        <div className="form-inline">
+          <button onClick={this.handleSubmit} className="btn btn-secondary">Submit</button>
+        </div>
       </form>
     );
   }

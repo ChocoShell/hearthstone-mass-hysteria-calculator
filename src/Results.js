@@ -3,11 +3,11 @@ import React from 'react';
 class Results extends React.Component {
 
   render() {
-    const {attack, healthBefore, healthAfter, survival, clearChance, remainingDamage} = this.props.stats;
+    const {attack, healthBefore, healthAfter, survival, isEnemy, clearChance, remainingDamage} = this.props.stats;
     return (
       <div>
         <table className="table">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th scope="col">Minion</th>
               <th scope="col">Attack</th>
@@ -20,24 +20,24 @@ class Results extends React.Component {
             {
               this.props.minions.map((m, index) => {
                 return (
-                  <tr>
+                  <tr className={isEnemy[index] ? "table-danger" : "table-success"}>
                     <td>{m}</td>
                     <td>{attack[index]}</td>
                     <td>{healthBefore[index]}</td>
                     <td>{healthAfter[index].toFixed(2)}</td>
-                    <td>{survival[index].toFixed(2)}</td>
+                    <td>{`${(100*survival[index]).toFixed(2)}%`}</td>
                   </tr>
                 );
               })
             }
           </tbody>
         </table>
-        <div>
-          {`Chance to Clear Enemy's Board: ${100*clearChance.toFixed(4)}%`}
-        </div>
-        <div>
+        <h5>
+          {`Chance to Clear Enemy's Board: ${(100*clearChance).toFixed(2)}%`}
+        </h5>
+        <h5>
           {`Expected Remaining Enemy Damage: ${remainingDamage.toFixed(2)}`}
-        </div>
+        </h5>
       </div>
     );
   }

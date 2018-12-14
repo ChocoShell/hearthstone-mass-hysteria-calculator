@@ -7,8 +7,8 @@ import massHysteria from "./massHysteria";
 
 class App extends React.Component {
   state = {
-    allyCount: 0,
-    enemyCount: 0,
+    allyCount: 7 ,
+    enemyCount: 7,
     boardMinions: [],
     results: {
       attack: [],
@@ -19,7 +19,7 @@ class App extends React.Component {
       clearChance: 0,
       remainingDamage: 0
     },
-    trials: 100
+    trials: 100000
   }
 
   handleCountSubmit = (allies, enemies) => {
@@ -80,13 +80,18 @@ class App extends React.Component {
   }
 
   render() {
+        // <div className="">
+        //   <MinionCountForm
+        //     handleSubmit={this.handleCountSubmit}
+        //     trials={this.state.trials}
+        //     handleTrialChange={this.handleTrialChange}
+        //   />
+        // </div>
     return (
-      <div>
-        <MinionCountForm
-          handleSubmit={this.handleCountSubmit}
-          trials={this.state.trials}
-          handleTrialChange={this.handleTrialChange}
-        />
+      <div className="d-flex flex-column">
+        <h3>Hearthstone Mass Hysteria Simulator</h3>
+        <div class="w-100"><hr/></div>
+        <h4>Minion Stats</h4>
         <MinionEntryForm
           friendlyMinions={this.state.allyCount}
           enemyMinions={this.state.enemyCount}
@@ -94,11 +99,16 @@ class App extends React.Component {
         />
         {
           this.state.boardMinions.length > 0 &&
-          <Results
-            stats={this.state.results}
-            trials={this.state.trials}
-            minions={this.state.boardMinions}
-          />
+          (
+            <div>
+              <h4>Results</h4>
+              <Results
+                stats={this.state.results}
+                trials={this.state.trials}
+                minions={this.state.boardMinions}
+              />
+            </div>
+          )
         }
       </div>
     );

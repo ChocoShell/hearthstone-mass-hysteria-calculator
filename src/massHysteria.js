@@ -118,7 +118,7 @@ const testMassHysteria = (stats, trials) => {
     const survival = new Array(n).fill(0);
     // Create 3D array to house the trials
     let simStats = arr3D(0, n, 3, trials);
-    let cleared = new Array(trials).fill(0);
+    let cleared = new Array(trials).fill(1);
     // for each trial
     for (let trial =0; trial < trials; trial++) {
       // do the trial and put it in the array
@@ -136,8 +136,8 @@ const testMassHysteria = (stats, trials) => {
       for (let i = 0; i < simStats.length; i++) {
         survival[i] = survival[i] + (simStats[i][1][trial] > 0 ? 1/trials : 0);
         // see whether or not the trial resulted in a full clear of enemy board
-        if (simStats[i][1][trial] * simStats[i][2][trial] > 0) {
-          cleared[trial] = 1;
+        if (simStats[i][1][trial] * simStats[i][2][trial] > 0.05) {
+          cleared[trial] = 0;
         }
       } 
     }

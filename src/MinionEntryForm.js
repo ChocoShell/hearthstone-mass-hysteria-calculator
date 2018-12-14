@@ -95,41 +95,43 @@ class MinionEntryForm extends React.Component {
 
   render() {
     return (
-      <form className="container" onSubmit={this.handleSubmit}>
-        <div className="form-group row entry formy">
-         { 
-            (Array.from(Array(this.props.friendlyMinions).keys())).map( i => {
-              return (
-                <Minion
-                  name={`Friendly ${i+1}`}
-                  key={`Friendly${i+1}`}
-                  attack={this.state[`Friendly${i+1}`][0]}
-                  health={this.state[`Friendly${i+1}`][1]}
-                  handleChange={(e, field) => this.handleChange(e, field, `Friendly${i+1}`)}
-                />
-              )
-            })
-          }
-        </div>
-        <div className="form-group row entry formy">
-          { 
-            (Array.from(Array(this.props.enemyMinions).keys())).map( i => {
-              return (
-                <Minion
-                  name={`Enemy ${i+1}`}
-                  key={`Enemy${i+1}`}
-                  attack={this.state[`Enemy${i+1}`][0]}
-                  health={this.state[`Enemy${i+1}`][1]}
-                  handleChange={(e, field) => this.handleChange(e, field, `Enemy${i+1}`)}
-                />
-              )
-            })
-          }
+      <form onSubmit={this.handleSubmit}>
+        <div>
+          <div className="d-inline-flex">
+            { 
+              (Array.from(Array(this.props.friendlyMinions).keys())).map( i => {
+                return (
+                  <Minion
+                    name={`Friendly ${i+1}`}
+                    key={`Friendly${i+1}`}
+                    attack={this.state[`Friendly${i+1}`][0]}
+                    health={this.state[`Friendly${i+1}`][1]}
+                    handleChange={(e, field) => this.handleChange(e, field, `Friendly${i+1}`)}
+                  />
+                )
+              })
+            }
+          </div>
+          <div className="d-inline-flex">
+            { 
+              (Array.from(Array(this.props.enemyMinions).keys())).map( i => {
+                return (
+                  <Minion
+                    name={`Enemy ${i+1}`}
+                    key={`Enemy${i+1}`}
+                    attack={this.state[`Enemy${i+1}`][0]}
+                    health={this.state[`Enemy${i+1}`][1]}
+                    handleChange={(e, field) => this.handleChange(e, field, `Enemy${i+1}`)}
+                  />
+                )
+              })
+            }
+          </div>
         </div>
         { !!(this.props.enemyMinions + this.props.friendlyMinions) &&
-          <input type="submit" value="Submit" />
+          <button className="btn btn-primary" type="submit">Calculate</button>
         }
-        
+
       </form>
     );
   }
