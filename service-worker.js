@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hearthstone-mass-hysteria-calculator/precache-manifest.cc015acb56404e919685f06dc72c735c.js"
+  "/hearthstone-mass-hysteria-calculator/precache-manifest.b45179288a2979455f46a2e9ce80fca5.js"
 );
 
 workbox.clientsClaim();
