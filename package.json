@@ -1,7 +1,7 @@
 {
   "name": "mass-hysteria",
   "version": "0.1.0",
-  "homepage": "http://chocoshell.github.io/mass-hysteria",
+  "homepage": "http://chocoshell.github.io/hearthstone-mass-hysteria-calculator",
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
