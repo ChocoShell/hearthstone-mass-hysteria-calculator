@@ -1,13 +1,13 @@
 {
-  "main.css": "/mass-hysteria/static/css/main.2655782e.chunk.css",
-  "main.js": "/mass-hysteria/static/js/main.a78042dd.chunk.js",
-  "main.js.map": "/mass-hysteria/static/js/main.a78042dd.chunk.js.map",
-  "static/js/1.d4936c6a.chunk.js": "/mass-hysteria/static/js/1.d4936c6a.chunk.js",
-  "static/js/1.d4936c6a.chunk.js.map": "/mass-hysteria/static/js/1.d4936c6a.chunk.js.map",
-  "runtime~main.js": "/mass-hysteria/static/js/runtime~main.4d5f19f5.js",
-  "runtime~main.js.map": "/mass-hysteria/static/js/runtime~main.4d5f19f5.js.map",
-  "static/css/main.2655782e.chunk.css.map": "/mass-hysteria/static/css/main.2655782e.chunk.css.map",
-  "index.html": "/mass-hysteria/index.html",
-  "precache-manifest.7a39b209a8e930c031f751876bbf7eed.js": "/mass-hysteria/precache-manifest.7a39b209a8e930c031f751876bbf7eed.js",
-  "service-worker.js": "/mass-hysteria/service-worker.js"
+  "main.css": "/hearthstone-mass-hysteria-calculator/static/css/main.2655782e.chunk.css",
+  "main.js": "/hearthstone-mass-hysteria-calculator/static/js/main.55842135.chunk.js",
+  "main.js.map": "/hearthstone-mass-hysteria-calculator/static/js/main.55842135.chunk.js.map",
+  "static/js/1.d4936c6a.chunk.js": "/hearthstone-mass-hysteria-calculator/static/js/1.d4936c6a.chunk.js",
+  "static/js/1.d4936c6a.chunk.js.map": "/hearthstone-mass-hysteria-calculator/static/js/1.d4936c6a.chunk.js.map",
+  "runtime~main.js": "/hearthstone-mass-hysteria-calculator/static/js/runtime~main.b52f1cfd.js",
+  "runtime~main.js.map": "/hearthstone-mass-hysteria-calculator/static/js/runtime~main.b52f1cfd.js.map",
+  "static/css/main.2655782e.chunk.css.map": "/hearthstone-mass-hysteria-calculator/static/css/main.2655782e.chunk.css.map",
+  "index.html": "/hearthstone-mass-hysteria-calculator/index.html",
+  "precache-manifest.e76ff68003d7212126c99a2bf94d3c87.js": "/hearthstone-mass-hysteria-calculator/precache-manifest.e76ff68003d7212126c99a2bf94d3c87.js",
+  "service-worker.js": "/hearthstone-mass-hysteria-calculator/service-worker.js"
 }

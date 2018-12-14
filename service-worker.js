@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mass-hysteria/precache-manifest.7a39b209a8e930c031f751876bbf7eed.js"
+  "/hearthstone-mass-hysteria-calculator/precache-manifest.e76ff68003d7212126c99a2bf94d3c87.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/mass-hysteria/index.html", {
+workbox.routing.registerNavigationRoute("/hearthstone-mass-hysteria-calculator/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
