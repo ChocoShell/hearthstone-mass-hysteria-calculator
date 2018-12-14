@@ -29,18 +29,22 @@ class App extends React.Component {
     let trialCount = trials;
     if (trials > 1000000) {
       trialCount = 1000000;
+    } else if (trials < 0) {
+      trialCount = 1;
     }
     if (isNaN(allyCount)) {
       allyCount = 0;
-    }
-    if (allyCount > 7) {
+    } else if (allyCount > 7) {
       allyCount = 7;
+    } else if (allyCount < 0) {
+      allyCount = 0;
     }
     if (isNaN(enemyCount)) {
       enemyCount = 0;
-    }
-    if (enemyCount > 7) {
+    } else if (enemyCount > 7) {
       enemyCount = 7;
+    } else if (enemyCount < 0) {
+      enemyCount = 0;
     }
     this.setState({
       allyCount,
