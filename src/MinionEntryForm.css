@@ -1,0 +1,13 @@
+.entry {
+}
+
+.container {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    margin: 0;
+    max-width: 100%;
+}
+
+.row {
+    flex-wrap: nowrap !important;
+}
