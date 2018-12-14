@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mass-hysteria/precache-manifest.153d2d2c1c2cfec05b4e4c5a1171bb0b.js"
+  "/mass-hysteria/precache-manifest.7a39b209a8e930c031f751876bbf7eed.js"
 );
 
 workbox.clientsClaim();

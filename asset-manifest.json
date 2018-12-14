@@ -1,14 +1,13 @@
 {
-  "main.css": "/mass-hysteria/static/css/main.9598c16a.chunk.css",
-  "main.js": "/mass-hysteria/static/js/main.089fc41f.chunk.js",
-  "main.js.map": "/mass-hysteria/static/js/main.089fc41f.chunk.js.map",
-  "static/js/1.82dafdb5.chunk.js": "/mass-hysteria/static/js/1.82dafdb5.chunk.js",
-  "static/js/1.82dafdb5.chunk.js.map": "/mass-hysteria/static/js/1.82dafdb5.chunk.js.map",
+  "main.css": "/mass-hysteria/static/css/main.2655782e.chunk.css",
+  "main.js": "/mass-hysteria/static/js/main.a78042dd.chunk.js",
+  "main.js.map": "/mass-hysteria/static/js/main.a78042dd.chunk.js.map",
+  "static/js/1.d4936c6a.chunk.js": "/mass-hysteria/static/js/1.d4936c6a.chunk.js",
+  "static/js/1.d4936c6a.chunk.js.map": "/mass-hysteria/static/js/1.d4936c6a.chunk.js.map",
   "runtime~main.js": "/mass-hysteria/static/js/runtime~main.4d5f19f5.js",
   "runtime~main.js.map": "/mass-hysteria/static/js/runtime~main.4d5f19f5.js.map",
-  "static/media/logo.svg": "/mass-hysteria/static/media/logo.5d5d9eef.svg",
-  "static/css/main.9598c16a.chunk.css.map": "/mass-hysteria/static/css/main.9598c16a.chunk.css.map",
+  "static/css/main.2655782e.chunk.css.map": "/mass-hysteria/static/css/main.2655782e.chunk.css.map",
   "index.html": "/mass-hysteria/index.html",
-  "precache-manifest.153d2d2c1c2cfec05b4e4c5a1171bb0b.js": "/mass-hysteria/precache-manifest.153d2d2c1c2cfec05b4e4c5a1171bb0b.js",
+  "precache-manifest.7a39b209a8e930c031f751876bbf7eed.js": "/mass-hysteria/precache-manifest.7a39b209a8e930c031f751876bbf7eed.js",
   "service-worker.js": "/mass-hysteria/service-worker.js"
 }
