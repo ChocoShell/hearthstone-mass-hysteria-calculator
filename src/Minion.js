@@ -8,7 +8,7 @@ class Minion extends React.Component {
   }
   render() {
     return (
-      <div className="form-group">
+      <div className="form-group minion-size">
         <label htmlFor="Minion">{this.props.name}:</label>
         <div className="form-inline">
           <label htmlFor={`${this.props.name}_attack`} className="col-sm-4 col-form-label">Attack:</label>

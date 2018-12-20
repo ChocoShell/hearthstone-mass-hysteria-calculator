@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Favicon from [hearthstone srbija](https://www.favicon.cc/?action=icon&file_id=717839)
+
 ## Available Scripts
 
 In the project directory, you can run:

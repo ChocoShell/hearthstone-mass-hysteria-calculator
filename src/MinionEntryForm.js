@@ -1,79 +1,23 @@
 import React from 'react';
 import Minion from './Minion';
-import './MinionEntryForm.css';
+import {baseFriendlyMinion, baseEnemyMinion} from './constants'
 
 class MinionEntryForm extends React.Component {
   state = {
-    Friendly1: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly2: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly3: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly4: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly5: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly6: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Friendly7: {
-      attack: 0,
-      health: 0,
-      position: 0
-    },
-    Enemy1: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy2: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy3: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy4: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy5: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy6: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
-    Enemy7: {
-      attack: 0,
-      health: 0,
-      position: 1
-    },
+    Friendly1: baseFriendlyMinion,
+    Friendly2: baseFriendlyMinion,
+    Friendly3: baseFriendlyMinion,
+    Friendly4: baseFriendlyMinion,
+    Friendly5: baseFriendlyMinion,
+    Friendly6: baseFriendlyMinion,
+    Friendly7: baseFriendlyMinion,
+    Enemy1: baseEnemyMinion,
+    Enemy2: baseEnemyMinion,
+    Enemy3: baseEnemyMinion,
+    Enemy4: baseEnemyMinion,
+    Enemy5: baseEnemyMinion,
+    Enemy6: baseEnemyMinion,
+    Enemy7: baseEnemyMinion,
   };
 
   handleSubmit = event => {
@@ -97,7 +41,7 @@ class MinionEntryForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
-          <div className="d-inline-flex">
+          <div className="d-flex align-content-center flex-wrap">
             { 
               (Array.from(Array(this.props.enemyMinions).keys())).map( i => {
                 return (
@@ -112,7 +56,8 @@ class MinionEntryForm extends React.Component {
               })
             }
           </div>
-          <div className="d-inline-flex">
+          <br />
+          <div className="d-flex align-content-center flex-wrap">
             { 
               (Array.from(Array(this.props.friendlyMinions).keys())).map( i => {
                 return (
@@ -128,10 +73,11 @@ class MinionEntryForm extends React.Component {
             }
           </div>
         </div>
-        { !!(this.props.enemyMinions + this.props.friendlyMinions) &&
-          <button className="btn btn-primary" type="submit">Calculate</button>
-        }
-
+        <div className="d-flex justify-content-center">
+          { !!(this.props.enemyMinions + this.props.friendlyMinions) &&
+            <button className="btn btn-primary" type="submit">Calculate</button>
+          }
+        </div>
       </form>
     );
   }
