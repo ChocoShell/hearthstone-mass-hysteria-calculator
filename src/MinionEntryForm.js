@@ -99,21 +99,6 @@ class MinionEntryForm extends React.Component {
         <div>
           <div className="d-inline-flex">
             { 
-              (Array.from(Array(this.props.friendlyMinions).keys())).map( i => {
-                return (
-                  <Minion
-                    name={`Friendly ${i+1}`}
-                    key={`Friendly${i+1}`}
-                    attack={this.state[`Friendly${i+1}`][0]}
-                    health={this.state[`Friendly${i+1}`][1]}
-                    handleChange={(e, field) => this.handleChange(e, field, `Friendly${i+1}`)}
-                  />
-                )
-              })
-            }
-          </div>
-          <div className="d-inline-flex">
-            { 
               (Array.from(Array(this.props.enemyMinions).keys())).map( i => {
                 return (
                   <Minion
@@ -122,6 +107,21 @@ class MinionEntryForm extends React.Component {
                     attack={this.state[`Enemy${i+1}`][0]}
                     health={this.state[`Enemy${i+1}`][1]}
                     handleChange={(e, field) => this.handleChange(e, field, `Enemy${i+1}`)}
+                  />
+                )
+              })
+            }
+          </div>
+          <div className="d-inline-flex">
+            { 
+              (Array.from(Array(this.props.friendlyMinions).keys())).map( i => {
+                return (
+                  <Minion
+                    name={`Friendly ${i+1}`}
+                    key={`Friendly${i+1}`}
+                    attack={this.state[`Friendly${i+1}`][0]}
+                    health={this.state[`Friendly${i+1}`][1]}
+                    handleChange={(e, field) => this.handleChange(e, field, `Friendly${i+1}`)}
                   />
                 )
               })

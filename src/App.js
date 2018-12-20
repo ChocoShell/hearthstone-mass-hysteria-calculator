@@ -1,5 +1,4 @@
 import React from 'react';
-import MinionCountForm from './MinionCountForm';
 import MinionEntryForm from './MinionEntryForm';
 import Results from './Results';
 import massHysteria from "./massHysteria";
@@ -80,13 +79,6 @@ class App extends React.Component {
   }
 
   render() {
-        // <div className="">
-        //   <MinionCountForm
-        //     handleSubmit={this.handleCountSubmit}
-        //     trials={this.state.trials}
-        //     handleTrialChange={this.handleTrialChange}
-        //   />
-        // </div>
     return (
       <div className="d-flex flex-column">
         <h3>Hearthstone Mass Hysteria Simulator</h3>
