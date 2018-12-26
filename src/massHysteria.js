@@ -1,35 +1,4 @@
-const shuffle = array => {
-  let currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-
-// a remake of the sample function that prevents sample(x)=sample(1:x) when length(x)=1
-const mysample = (x) => {
-    if (x.length > 1) {
-      return shuffle(x);
-    } else {
-      return x
-    }
-}
-
-// Create list from 0 to n-1
-const range = n => {
-  return Array.from(Array(n).keys());
-}
+import {mysample, range} from './utils';
 
 // Create a 2D array
 const matrix = (arr, ncol, byrow) => {
@@ -66,7 +35,7 @@ const arr3D = (fillVal, dim1, dim2, dim3) => {
 // 0 = your side, 1 = opponent's side
 // i.e. (attack1, health1, side1, attack2, health2, side 2,...)
 // Output: matrix of stats of minions after mass hysteria has been cast
-const massHysteria = boardStats => {
+export const massHysteria = boardStats => {
   const n = boardStats.length/3;
   let stats = matrix(boardStats, 3, true);
   const order = mysample(range(n));
@@ -167,11 +136,11 @@ const testMassHysteria = (stats, trials) => {
     // console.log("clearChance: ", 100*clearChance.toFixed(4));
     // console.log("remainingDamage: ", remainingDamage.toFixed(2));
     return {
-      attack,
-      healthBefore,
+      attack, // Already Given
+      healthBefore, // Already Given
       healthAfter,
       survival,
-      isEnemy,
+      isEnemy, // Already Given
       clearChance,
       remainingDamage
     }

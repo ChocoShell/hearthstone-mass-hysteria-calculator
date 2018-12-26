@@ -82,7 +82,7 @@ class App extends React.Component {
     return (
       <div className="d-flex flex-column">
         <h3>Hearthstone Mass Hysteria Simulator</h3>
-        <div class="w-100"><hr/></div>
+        <div className="w-100"><hr/></div>
         <h4>Minion Stats</h4>
         <MinionEntryForm
           friendlyMinions={this.state.allyCount}
